@@ -5,7 +5,7 @@
 #include <unistd.h>
 
 /* APPROACH 1 */
-inline int print_reverse(char *str) {
+inline int print_reverse_iterative(char *str) {
     int len = strlen(str);  /* Determine the length of the input string. */
     for (int i = len - 1; i >= 0; i--) {  /* Loop through the characters of the string in reverse order. */
         write(1, &str[i], 1);  /* Write each character to standard output. */
@@ -14,11 +14,11 @@ inline int print_reverse(char *str) {
 }
 
 /* APPROACH 2 */
-inline int print_reverse2(char *str)
+inline int print_reverse_recursive(char *str)
 {
     if (!*str)
         return 1;
-    if (print_reverse2(str + 1) == 1)
+    if (print_reverse_recursive(str + 1) == 1)
     {
         write(1, str, 1);
         return 1;
