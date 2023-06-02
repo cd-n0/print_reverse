@@ -1,3 +1,6 @@
+#ifndef PRINT_REVERSE_H
+#define PRINT_REVERSE_H
+
 #include <string.h>
 #include <unistd.h>
 
@@ -22,3 +25,5 @@ int print_reverse2(char *str)
     }
     return -1; // that mean's, a something happened unexcepted
 }
+
+#endif // PRINT_REVERSE_H
